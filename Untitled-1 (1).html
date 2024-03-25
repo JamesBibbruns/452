@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #3b5998; /* Facebook blue */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #fff; /* White text color for contrast */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s; /* Transition for smooth color change */
+}
+
+.topnav a:hover {
+  background-color: #1d2a47; /* Darker shade on mouse-over */
+  color: #fff;
+}
+
+.topnav a.active {
+  background-color: #4CAF50; /* Green color for the active link */
+  color: white;
+  font-weight: bold;
+}
+
+.topnav a.right {
+  float: right;
+}
+
+/* Main content container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Content sections */
+.content {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Footer styling */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav a.right {
+    float: none;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about" class="right">About</a>
+</div>
+
+<div class="container">
+  <div class="content">
+    <h2>My Website</h2>
+    <p>Welcome to my website. Here you'll find the latest news, updates, and more.</p>
+  </div>
+  <div class="content">
+    <h3>Some Content</h3>
+    <p>This is some example text for the content area of the website. You can add your own content here.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Copyright ©2024 My Website. All rights reserved.</p>
+</div>
+
+</body>
+</html>
