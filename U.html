@@ -2,58 +2,92 @@
 <html>
 <head>
 <style>
+/* General body styling */
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f7f7f7;
+  background-color: #f4f4f4;
   color: #333;
 }
-
-.topnav {
+.header {
+background: white;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+h1{
+    color: black;
+    size: 10px;
+}
+/* Container for the navigation bar and content */
+.container {
+  width: 100%;
+  margin: auto;
   overflow: hidden;
-  background-color: #3b5998; /* Facebook blue */
+}
+
+/* Styling for the top navigation bar */
+.topnav {
+  background: #4d4d4d; /* Dark background color */
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #fff; /* White text color for contrast */
-  text-align: center;
-  padding: 14px 16px;
+  color: #fff; /* White text color */
   text-decoration: none;
+  padding:   12px 18px;
   transition: 0.3s; /* Transition for smooth color change */
+  display: inline-block;
 }
 
 .topnav a:hover {
-  background-color: #1d2a47; /* Darker shade on mouse-over */
-  color: #fff;
+  background-color: #fff; /* Light background on mouse-over */
+  color: #4d4d4d; /* Dark text color on mouse-over */
 }
 
 .topnav a.active {
-  background-color: #4CAF50; /* Green color for the active link */
+  background-color: #4CAF50; /* Highlight the active link */
   color: white;
-  font-weight: bold;
 }
 
-.topnav a.right {
+/* Align the "right" link to the right */
+.topnav .right {
   float: right;
 }
 
-/* Main content container */
-.container {
-  max-width: 1200px;
-  margin: auto;
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Content columns styling */
+.leftcolumn {
+  float: left;
+  width: 55%;
   padding: 20px;
 }
 
-/* Content sections */
-.content {
-  background: #fff;
+.rightcolumn {
+  position: absolute;
+  width: 25%;
   padding: 20px;
+  background: #fff; /* White background for the right column */
+  top: 210px;
+  right: 50px;
+}
+
+/* Card styling for content blocks */
+.card {
+  background: #fff;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded corners */
 }
 
 /* Footer styling */
@@ -61,27 +95,28 @@ body {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  height: 100px;
+  position: relative;
+}
+.footer p{
+  top: 25px;
   position: absolute;
-  width: 100%;
-  bottom: 0;
+  left: 45%;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+  }
   .topnav a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav a.right {
-    float: none;
-  }
-  .container {
-    padding: 10px;
+    padding: 12px 16px;
   }
 }
-
+.card img{
+  width: 300px;
+  height: 350px;
+}
 </style>
 </head>
 <body>
