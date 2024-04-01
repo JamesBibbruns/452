@@ -4,56 +4,121 @@
 <meta charset="UTF-8">
 <title> - Bringing People Together</title>
 <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  .topnav {
-    background: #4d4d4d;
-    overflow: hidden;
-    padding: 20px 0;
-  }
-  .topnav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 18px;
-    transition: 0.3s;
-    display: inline-block;
-  }
-  .topnav a:hover {
-    background-color: #fff;
-    color: #4d4d4d;
-  }
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  .content {
-    padding: 20px;
-  }
-  .card {
-    background: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  .footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+ /* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.header {
+background: white;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+}
+h1{
+    color: black;
+    size: 10px;
+}
+/* Container for the navigation bar and content */
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Styling for the top navigation bar */
+.topnav {
+  background: #4d4d4d; /* Dark background color */
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.topnav a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  padding:   12px 18px;
+  transition: 0.3s; /* Transition for smooth color change */
+  display: inline-block;
+}
+
+.topnav a:hover {
+  background-color: #fff; /* Light background on mouse-over */
+  color: #4d4d4d; /* Dark text color on mouse-over */
+}
+
+.topnav a.active {
+  background-color: #4CAF50; /* Highlight the active link */
+  color: white;
+}
+
+/* Align the "right" link to the right */
+.topnav .right {
+  float: right;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Content columns styling */
+.leftcolumn {
+  float: left;
+  width: 55%;
+  padding: 20px;
+}
+
+.rightcolumn {
+  position: absolute;
+  width: 25%;
+  padding: 20px;
+  background: #fff; /* White background for the right column */
+  top: 210px;
+  right: 50px;
+}
+
+/* Card styling for content blocks */
+.card {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer styling */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  height: 100px;
+  position: relative;
+}
+.footer p{
+  top: 25px;
+  position: absolute;
+  left: 45%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leftcolumn, .rightcolumn {
     width: 100%;
   }
+  .topnav a {
+    padding: 12px 16px;
+  }
+}
+.card img{
+  width: 300px;
+  height: 350px;
+}
 </style>
 </head>
 <body>
